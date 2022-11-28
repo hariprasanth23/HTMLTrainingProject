@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+      .modal-content,.containerBg{
+        background-image: url("Bgcars.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .carousel {
+        margin-bottom: 4rem;
+      }
+      .carousel-caption {
+        bottom: 3rem;
+        z-index: 10;
+      }
+      .carousel-item {
+        height: 50rem;
+      }
+      .carousel-item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 50rem;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-md navbar-dark bg-dark"
+      aria-label="Fourth navbar example"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">King Mechanic</a>
+        
+
+        <div class="collapse navbar-collapse" id="navbarsExample04">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item">
+              <button
+              type="button"
+              class="btn btn-dark text-white"
+            >
+            Home
+            </button>
+            </li>
+            <li class="nav-item">
+              <button
+              type="button"
+              class="btn btn-dark text-white"
+            >
+            About
+            </button>
+            </li>
+            <li class="nav-item">
+              <button
+              type="button"
+              class="btn btn-dark text-white"
+            >
+            Sell/Buy
+            </button>
+            </li>
+            <li class="nav-item">
+              <button
+              type="button"
+              class="btn btn-dark text-white"
+            >
+            Services
+            </button>
+            </li>
+            <li class="nav-item">
+              <button
+              type="button"
+              class="btn btn-dark text-white"
+            >
+            contact
+            </button>
+            </li>
+            <li class="nav-item">
+              <button
+              type="button"
+              class="btn btn-dark text-white"
+              data-bs-toggle="modal"
+              data-bs-target="#profileModal"
+            >
+              Profile
+            </button>
+            </li>
+            <li class="nav-item">
+              <button
+              type="button"
+              class="btn btn-dark text-white"
+            >
+            privacy policy
+            </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="modal" id="profileModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div>
+            <div class="container containerBg p-5 text-white">
+              <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center" style="padding-bottom: 15px;">
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary">Sign up</button>
+                    <button type="button" class="btn btn-primary">Login</button>
+                  </div>
+                </div>
+              </div>
+              <form>
+                <div class="mb-3 row" style="padding-top: 15px;">
+                  <label for="customerName" class="col-md-2 col-form-label"
+                    >Name</label
+                  >
+                  <div class="col-md-5">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="customerName"
+                      autofocus
+                    />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="customerAge" class="col-md-2 col-form-label">Age</label>
+                  <div class="col-md-5">
+                    <input type="number" class="form-control" id="customerAge" />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="customerEmail" class="col-md-2 col-form-label">Email</label>
+                  <div class="col-md-5">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="customerEmail"
+                      placeholder="Should end with @gmail.com"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="customerGender" class="col-md-2 col-form-label"
+                    >Gender</label
+                  >
+                  <div class="col-md-4">
+                    <div class="form-check col-md-1">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="customerGender"
+                        name="customerGender"
+                        value="Male"
+                        checked
+                      />Male
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="customerGender"
+                        name="customerGender"
+                        value="Female"
+                      />Female
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="customerMobileNumber" class="col-md-2 col-form-label"
+                    >Mobile</label
+                  >
+                  <div class="col-md-5">
+                    <input type="Text" class="form-control" id="customerMobileNumber" />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="customerAadharID" class="col-md-2 col-form-label"
+                    >Aadhar ID</label
+                  >
+                  <div class="col-md-5">
+                    <input type="Text" class="form-control" id="customerAadharID" />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="customerPassword" class="col-md-2 col-form-label"
+                    >Password</label
+                  >
+                  <div class="col-md-5">
+                    <input type="password" class="form-control" id="customerPassword" />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label"></label>
+                  <div class="col-md-2">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#RegisterationSuccessful"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                  <div class="col-md-1">
+                    <button type="cancel" class="btn btn-danger">Cancel</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="RegisterationSuccessful">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title text-white">Customer Registeration Successful</h6>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >X
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="carAddedSuccessful">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success">
+            <h6 class="modal-title bg-success text-white">Car Added Successful</h6>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >X
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="addNewCar">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div>
+            <div class="container containerBg p-5 text-white">
+              <form>
+                <div class="mb-3 row" style="padding-top: 15px;">
+                  <label for="customerName" class="col-md-2 col-form-label"
+                    >Name</label
+                  >
+                  <div class="col-md-5">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="customerName"
+                      autofocus
+                    />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="carName" class="col-md-2 col-form-label">Car Name</label>
+                  <div class="col-md-5">
+                    <input type="text" class="form-control" id="carName" />
+                  </div>
+                  <div class="col-md-2">
+                    <button class="btn btn-danger">Used Car</button>
+                  </div>
+                  
+                </div>
+                <div class="mb-3 row">
+                  <label for="carModel" class="col-md-2 col-form-label">Car Model</label>
+                  <div class="col-md-5">
+                    <input type="number" class="form-control" id="carModel" />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="carBuyingPrice" class="col-md-2 col-form-label">Buying Price</label>
+                  <div class="col-md-5">
+                    <input type="text" class="form-control" id="carBuyingPrice" />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="carTransmission" class="col-md-2 col-form-label">Transmission</label>
+                  <div class="col-md-5">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="carTransmission" data-bs-toggle="dropdown" aria-expanded="false">
+                      Please Select
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="carTransmission">
+                      <li><a class="dropdown-item" href="#">Automatic</a></li>
+                      <li><a class="dropdown-item" href="#">Manual</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="carMileage" class="col-md-2 col-form-label">Car Mileage</label>
+                  <div class="col-md-5">
+                    <input type="text" class="form-control" id="carMileage" />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="carSellingPrice" class="col-md-2 col-form-label">Car Selling Price</label>
+                  <div class="col-md-5">
+                    <input type="text" class="form-control" id="carSellingPrice" />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="carSeats" class="col-md-2 col-form-label">Seats</label>
+                  <div class="col-md-5">
+                    <input type="number" class="form-control" id="carSeats" />
+                  </div>
+                </div>
+
+
+                <div class="mb-3 row">
+                  <label class="col-md-2 col-form-label"></label>
+                  <div class="col-md-2">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#carAddedSuccessful"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                  <div class="col-md-1">
+                    <button type="cancel" class="btn btn-danger">Cancel</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-dark p-3 m-2">
+      <div class="row">
+
+
+        <div class="col-md-2">
+          
+          <div class="card mt-3">
+            <div class="card-body bg-light">
+              <button type="button" class="btn btn-primary" style="width: 100%;" data-bs-toggle="modal"
+              data-bs-target="#addNewCar">Add New Car</button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-9 bg-dark">
+
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="sq1.jpg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Charan Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-danger"> Used Cars</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Ferrari</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td>Selling Price</td>
+                    <td>40000000</td>
+                    <td>Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="sq22.jpg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Hari Prasanth S</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-success">New Car</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Maserati</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2016</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: bold;">Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td style="font-weight: bold;">Selling Price</td>
+                    <td>40000000</td>
+                    <td style="font-weight: bold;">Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="serv2.jpg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Manoj Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-success"> New Car</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Ferrari</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: bold;">Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td style="font-weight: bold;">Selling Price</td>
+                    <td>40000000</td>
+                    <td style="font-weight: bold;">Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="serv3.jpg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-success"> New Cars</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Aston Martin</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td>Selling Price</td>
+                    <td>40000000</td>
+                    <td>Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="serv4.jpg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Charan Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-danger"> Used Cars</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Bentley GT</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td>Selling Price</td>
+                    <td>40000000</td>
+                    <td>Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="serv5.jpeg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Charan Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-danger"> Used Cars</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Ferrari</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td>Selling Price</td>
+                    <td>40000000</td>
+                    <td>Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="th1.jpg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Charan Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-danger"> Used Cars</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Ferrari</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td>Selling Price</td>
+                    <td>40000000</td>
+                    <td>Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="serv6.jpg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Charan Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-success"> New Car</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Ferrari</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td>Selling Price</td>
+                    <td>40000000</td>
+                    <td>Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="sq22.jpg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Charan Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-success"> New Car</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Ferrari</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td>Selling Price</td>
+                    <td>40000000</td>
+                    <td>Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="serv2.jpg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Charan Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-danger"> Used Cars</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Ferrari</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td>Selling Price</td>
+                    <td>40000000</td>
+                    <td>Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="serv3.jpg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Charan Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-danger"> Used Cars</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Ferrari</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td>Selling Price</td>
+                    <td>40000000</td>
+                    <td>Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="serv4.jpg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Charan Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-success"> New Car</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Ferrari</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td>Selling Price</td>
+                    <td>40000000</td>
+                    <td>Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="serv5.jpeg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Charan Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-danger"> Used Cars</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Ferrari</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td>Selling Price</td>
+                    <td>40000000</td>
+                    <td>Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card flex-row" style="margin-top: 10px;margin-bottom: 10px;"><img src="th1.jpg" height="200px" width="200px" style="padding: 5px;"/>
+            <div class="card-body bg-dark text-white">
+              <table class="table table-borderless text-white">
+                <thead>
+                  <tr>
+                    <th>Charan Kumar</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th><button class="btn btn-success"> New Car</button> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: bold;">Car Name </td>
+                    <td>Ferrari</td>
+                    <td style="font-weight: bold;">Model</td>
+                    <td>2014</td>
+                    <td style="font-weight: bold;">Buying Price</td>
+                    <td>45000000</td>
+                    <td style="font-weight: bold;">Transmission</td>
+                    <td>Manual</td>
+                  </tr>
+                  <tr>
+                    <td>Mileage</td>
+                    <td>25.5 kmpl</td>
+                    <td>Selling Price</td>
+                    <td>40000000</td>
+                    <td>Seats</td>
+                    <td>2</td>
+                    <td></td>
+                    <td><button class="btn btn-primary"> View Details</button></td>
+                  </tr>                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </body>
+    </html>
